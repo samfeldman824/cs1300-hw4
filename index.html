@@ -19,97 +19,29 @@
             --transition: 0.3s ease;
         }
         *, *::before, *::after { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: var(--clr-light);
-            color: var(--clr-dark);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
-        }
-        header p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            margin-bottom: 3rem;
-        }
-        .card {
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            padding: 1.5rem;
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--clr-primary);
-        }
-        p, li {
-            font-size: 1rem;
-            color: var(--clr-dark);
-        }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--clr-light); color: var(--clr-dark); line-height: 1.6; }
+        header { background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary)); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin: 0.5rem 0; }
+        header p { font-size: 1rem; opacity: 0.9; }
+        main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        section { margin-bottom: 3rem; }
+        .card { background: white; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.5rem; transition: transform var(--transition), box-shadow var(--transition); }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: var(--clr-primary); }
+        p, li { font-size: 1rem; color: var(--clr-dark); }
         ul { padding-left: 1.5rem; }
         dl { margin: 1rem 0; }
         dt { font-weight: 600; margin-top: 1rem; }
         dd { margin-left: 1rem; color: #555; }
-        figure {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        figure img {
-            max-width: 100%;
-            border-radius: var(--radius);
-        }
-        figure figcaption {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-        .story-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-        }
-        .story-grid figure {
-            background: white;
-            border-radius: var(--radius);
-            padding: 0.5rem;
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-        .story-grid figure:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-        footer {
-            background: var(--clr-secondary);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            font-size: 0.9rem;
-        }
+        dd p { margin: 0.25rem 0; }
+        figure { margin: 1rem 0; text-align: center; }
+        figure img { max-width: 100%; border-radius: var(--radius); }
+        figure figcaption { font-size: 0.9rem; color: #666; margin-top: 0.5rem; }
+        .storyboard-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 1rem; }
+        footer { background: var(--clr-secondary); color: white; text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
+        .persona-desc { margin-top: 1rem; }
+        .persona-desc p { margin-bottom: 0.75rem; }
+        .persona-desc strong { display: block; margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
     </style>
 </head>
 <body>
@@ -143,38 +75,59 @@
         <section id="interviews" class="card">
             <h2>User Interviews</h2>
             <dl>
-                <dt>How do you set cooking time?</dt>
-                <dd>“I hit the 30s quick-start; I never touch the keypad.”</dd>
-                <dt> Do you ever use any of the top buttons? e.g. deforr defrost or cook power?</dt>
-                <dd>“Never. I don't really understand what those buttons do.”</dd>
-                <dt>What annoys you most?</dt>
-                <dd>“Multiple beeps, confusing resets, and no progress bar.”</dd>
+                <dt>1. How do you typically set cooking time?</dt>
+                <dd>Most users enter the exact time on the numeric keypad and press “Start” for precision, while some rely on quick presets (like a 1‑minute button) when hurried.</dd>
+                <dt>2. Do you use the power-level or defrost features?</dt>
+                <dd>Interviewees rarely use these options; those who tried them found the labels unclear and preferred cooking at full power.</dd>
+                <dt>3. Have you used the “Add 30s” quick button?</dt>
+                <dd>The “Add 30s” feature is appreciated for its convenience, though a few participants were unaware it existed.</dd>
+                <dt>4. What frustrates you most about this microwave?</dt>
+                <dd>Users mentioned sticky or unresponsive buttons, ambiguous beeps, and lack of visible progress feedback as their main pain points.</dd>
+                <dt>5. What do you find most helpful?</dt>
+                <dd>They praised the clear numeric display, the intuitive Start button, and the quick-presets for streamlining interactions.</dd>
+                <dt>6. What improvements would you suggest?</dt>
+                <dd>Common suggestions included adding a visual progress bar, enlarging and spacing buttons for better responsiveness, and a memory function for last-used settings.</dd>
             </dl>
+        </section>
+        <section id="sketch-overview" class="card">
+            <h2>What is an Annotated Sketch?</h2>
+            <p>An annotated sketch visually breaks down the interface by labeling key components and interactions. It highlights elements like the keypad, display, presets, and door handle to clarify their functions and guide design improvements.</p>
         </section>
         <section id="sketch" class="card">
             <h2>Annotated Interface Sketch</h2>
             <figure>
-                <img src="sketch.png" alt="Microwave Interface Sketch">
+                <img src="images/annotated_sketch.png" alt="Microwave Interface Sketch">
                 <figcaption>Figure 2: Labeled diagram of interactive elements.</figcaption>
             </figure>
+        </section>
+        <section id="personas-overview" class="card">
+            <h2>Understanding the Personas</h2>
+            <p>Before diving into the empathy map visuals, it’s important to understand why we use personas. These images represent two archetypal users—a Busy Student and an Office Professional—capturing their goals, frustrations, and behaviors when using a microwave. By mapping what they say, think, do, and feel, we gain deeper insights into user needs.</p>
         </section>
         <section id="personas" class="card">
             <h2>Personas</h2>
             <figure class="story-grid">
-                <img src="empathymap1.png" alt="Student Persona">
-                <figcaption>Busy Student</figcaption>
-                <img src="empathymap2.png" alt="Professional Persona">
-                <figcaption>Office Professional</figcaption>
+                <figure><img src="images/empathy1.png" alt="Busy Student"><figcaption>Busy Student</figcaption></figure>
+                <figure><img src="images/empathy2.png" alt="Office Professional"><figcaption>Office Professional</figcaption></figure>
             </figure>
+            <div class="persona-desc">
+                <p><strong>Busy Student</strong> balances classes and social activities, needing quick, intuitive interfaces.</p>
+                <p><strong>Office Professional</strong> values reliability and predictability to stay on schedule.</p>
+            </div>
+        </section>
+        <section id="storyboard-intro" class="card">
+            <h2>What is a Storyboard?</h2>
+            <p>A storyboard is a visual sequence of frames illustrating key moments in a user's interaction with a product. It helps communicate the flow of actions, emotions, and touchpoints in a clear narrative.</p>
         </section>
         <section id="storyboard" class="card">
             <h2>Storyboard</h2>
-            <div class="story-grid">
-                <figure><img src="story1.jpg" alt="Approach"><figcaption>Alex approaches cold lunch.</figcaption></figure>
-                <figure><img src="story2.jpg" alt="Preset"><figcaption>Uses 30s preset.</figcaption></figure>
-                <figure><img src="story3.jpg" alt="Countdown"><figcaption>Countdown begins with unclear beep.</figcaption></figure>
-                <figure><img src="story4.jpg" alt="Retrieve"><figcaption>Retrieves hot meal.</figcaption></figure>
-                <figure><img src="story5.jpg" alt="Satisfied"><figcaption>Satisfied return to work.</figcaption></figure>
+            <div class="storyboard-grid">
+                <figure><img src="images/storyboard1.png" alt="Approach"><figcaption>Paula approaches microwave.</figcaption></figure>
+                <figure><img src="images/storyboard2.png" alt="Input"><figcaption>Puts in food and sets timer.</figcaption></figure>
+                <figure><img src="images/storyboard3.png" alt="Cooking"><figcaption>Watches cooking progress.</figcaption></figure>
+                <figure><img src="images/storyboard4.png" alt="Remove"><figcaption>Retrieves hot meal; people wait.</figcaption></figure>
+                <figure><img src="images/storyboard5.png" alt="Return"><figcaption>Walks back with hot meal.</figcaption></figure>
+                <figure><img src="images/storyboard6.png" alt="Enjoy"><figcaption>Eats meal with colleagues.</figcaption></figure>
             </div>
         </section>
     </main>
