@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Microwave Usability Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clr-primary: #ff6f00;
+            --clr-secondary: #37474f;
+            --clr-light: #fafafa;
+            --clr-dark: #212121;
+            --radius: 0.8rem;
+            --shadow-sm: 0 4px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 20px rgba(0,0,0,0.1);
+            --transition: 0.3s ease;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--clr-light);
+            color: var(--clr-dark);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 1.5rem;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--clr-primary);
+        }
+        p, li {
+            font-size: 1rem;
+            color: var(--clr-dark);
+        }
+        ul { padding-left: 1.5rem; }
+        dl { margin: 1rem 0; }
+        dt { font-weight: 600; margin-top: 1rem; }
+        dd { margin-left: 1rem; color: #555; }
+        figure {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            border-radius: var(--radius);
+        }
+        figure figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+        .story-grid figure {
+            background: white;
+            border-radius: var(--radius);
+            padding: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .story-grid figure:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        footer {
+            background: var(--clr-secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Public Microwave Usability Study</h1>
+        <p>Exploring the user experience of communal microwaves</p>
+    </header>
+    <main>
+        <section id="motivation" class="card">
+            <h2>Why Study Microwaves?</h2>
+            <p>Microwaves in shared spaces—offices, dorms, and break rooms—are everywhere, yet their interfaces often confuse users. Cryptic symbols, unresponsive buttons, and minimal feedback create frustration. This study aims to uncover those pain points and recommend design improvements.</p>
+        </section>
+        <section id="background" class="card">
+            <h2>Study Context at CIT</h2>
+            <p>The study was conducted in the communal kitchens within the Computing and Information Technology (CIT) building at Brown University. Over two full days during lunch hours and mid-afternoon breaks, I observed users as they interacted with countertop microwaves. I recorded each interaction—button sequences, preset usage, and session durations—while taking care to remain unobtrusive. Immediately following their use, I conducted 12 brief, informal interviews to capture real-time feedback on clarity, ease of use, and perceived responsiveness.</p>
+        </section>
+        <figure>
+            <img src="images/microwave.png" alt="Shared Kitchen Microwave">
+            <figcaption>Figure 1: Shared microwave in the CIT communal kitchen.</figcaption>
+        </figure>
+        <section id="initial-observations" class="card">
+            <h2>Initial Observations</h2>
+            <ul>
+                <li>The vast majority of users entered cooking time via the numeric keypad and pressed “Start,” bypassing presets, power-level adjustments, and other buttons.</li>
+                <li>Several users waited close to the microwave, watching the digital display for confirmation before stepping away.</li>
+                <li>A few pressed the “Add 30s” button repeatedly, expecting it to function like a quick-increment feature.</li>
+                <li>Some users opened the door mid-cycle to verify operation, inadvertently pausing the heating process.</li>
+                <li>Variations in keypad press speed suggested uncertainty about whether inputs were registered.</li>
+            </ul>
+        </section>
+        <section id="interviews" class="card">
+            <h2>User Interviews</h2>
+            <dl>
+                <dt>How do you set cooking time?</dt>
+                <dd>“I hit the 30s quick-start; I never touch the keypad.”</dd>
+                <dt> Do you ever use any of the top buttons? e.g. deforr defrost or cook power?</dt>
+                <dd>“Never. I don't really understand what those buttons do.”</dd>
+                <dt>What annoys you most?</dt>
+                <dd>“Multiple beeps, confusing resets, and no progress bar.”</dd>
+            </dl>
+        </section>
+        <section id="sketch" class="card">
+            <h2>Annotated Interface Sketch</h2>
+            <figure>
+                <img src="sketch.png" alt="Microwave Interface Sketch">
+                <figcaption>Figure 2: Labeled diagram of interactive elements.</figcaption>
+            </figure>
+        </section>
+        <section id="personas" class="card">
+            <h2>Personas</h2>
+            <figure class="story-grid">
+                <img src="empathymap1.png" alt="Student Persona">
+                <figcaption>Busy Student</figcaption>
+                <img src="empathymap2.png" alt="Professional Persona">
+                <figcaption>Office Professional</figcaption>
+            </figure>
+        </section>
+        <section id="storyboard" class="card">
+            <h2>Storyboard</h2>
+            <div class="story-grid">
+                <figure><img src="story1.jpg" alt="Approach"><figcaption>Alex approaches cold lunch.</figcaption></figure>
+                <figure><img src="story2.jpg" alt="Preset"><figcaption>Uses 30s preset.</figcaption></figure>
+                <figure><img src="story3.jpg" alt="Countdown"><figcaption>Countdown begins with unclear beep.</figcaption></figure>
+                <figure><img src="story4.jpg" alt="Retrieve"><figcaption>Retrieves hot meal.</figcaption></figure>
+                <figure><img src="story5.jpg" alt="Satisfied"><figcaption>Satisfied return to work.</figcaption></figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2025 Microwave UX Study. All rights reserved.
+    </footer>
+</body>
+</html>
