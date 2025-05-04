@@ -122,6 +122,14 @@
             padding: 2rem 1rem;
             font-size: 0.9rem;
         }
+        footer a {
+            color: #ffe0b2;
+            text-decoration: underline;
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         .persona-desc {
             margin-top: 1rem;
         }
@@ -183,7 +191,7 @@
         <section id="sketch-overview" class="card">
             <h2>What is an Annotated Sketch?</h2>
             <p>An annotated sketch visually breaks down the interface by labeling key components and interactions. It highlights elements like the keypad, display, presets, and door handle to clarify their functions and guide design improvements.</p>
-        </section>    
+        </section>
         <section id="sketch" class="card">
             <h2>Annotated Interface Sketch</h2>
             <figure>
@@ -201,6 +209,10 @@
                 <figure><img src="images/empathy1.png" alt="Busy Student"><figcaption>Busy Student</figcaption></figure>
                 <figure><img src="images/empathy2.png" alt="Office Professional"><figcaption>Office Professional</figcaption></figure>
             </figure>
+            <div class="persona-desc">
+                <p><strong>Busy Student</strong> balances classes and social activities, needing quick, intuitive interfaces.</p>
+                <p><strong>Office Professional</strong> values reliability and predictability to stay on schedule.</p>
+            </div>
         </section>
         <section id="storyboard-intro" class="card">
             <h2>What is a Storyboard?</h2>
@@ -219,7 +231,10 @@
         </section>
     </main>
     <footer>
-        © 2025 Microwave UX Study. All rights reserved.
+        <div class="footer-content">
+            <p>Thank you to all participants for sharing their time and valuable insights. Your feedback has been instrumental in understanding real-world interactions.</p>
+            <p>&copy; 2025 Microwave UX Study. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
